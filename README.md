@@ -24,7 +24,7 @@
 
 ### Data Streaming
 
-- [JSON stream：如何边接收边解析 JSON](notes/data-streaming/json-stream.md)
+- [JSON stream：为什么不是每个 chunk 都能 parse](notes/data-streaming/json-stream.md)
 
 ### Package Management
 
