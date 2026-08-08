@@ -29,6 +29,7 @@
 ### Package Management
 
 - [pnpm 的 content-addressable store](notes/package-management/pnpm-content-addressable-store.md)
+- [CAS 为什么按 hash 前缀分目录](notes/package-management/hash-prefix-directory-sharding.md)
 
 ## 本地预览
 
