@@ -58,9 +58,6 @@ export default defineConfig({
     'CONTRIBUTING.md',
     'templates/**/*.md',
   ],
-  sitemap: {
-    hostname: 'https://recall.liangkui.me',
-  },
   themeConfig: {
     nav: [
       { text: '笔记', link: '/notes/data-streaming/json-stream' },
@@ -70,18 +67,28 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        translations: {
-          button: {
-            buttonText: '搜索',
-            buttonAriaLabel: '搜索',
-          },
-          modal: {
-            noResultsText: '没有找到相关内容',
-            resetButtonTitle: '清除查询',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭',
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索',
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '重置搜索',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '没有找到相关内容',
+                footer: {
+                  selectText: '选择',
+                  selectKeyAriaLabel: '回车',
+                  navigateText: '导航',
+                  navigateUpKeyAriaLabel: '上箭头',
+                  navigateDownKeyAriaLabel: '下箭头',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
             },
           },
         },
