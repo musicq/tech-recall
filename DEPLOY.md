@@ -28,8 +28,6 @@ After the Pages project is live:
 3. Add `recall.liangkui.me`.
 4. Follow the DNS prompt if Cloudflare asks for confirmation.
 
-The VitePress sitemap is already configured for `https://recall.liangkui.me`.
-
 ## Local preview
 
 ```bash
