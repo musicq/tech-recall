@@ -4,6 +4,12 @@
 
 它不追求完整覆盖，也不替代官方文档。每篇笔记只保留：这个概念解决什么问题、核心原理是什么、最小实现如何工作，以及最容易忘记的边界。目标是几分钟内看完，并重新建立正确的 mental model。
 
+## 在线阅读
+
+推荐域名：**`https://recall.liangkui.me`**。
+
+仓库已经配置为 VitePress。Cloudflare Pages 连接 `main` 后，每次笔记更新都可以自动重新构建并上线。部署参数见 [DEPLOY.md](DEPLOY.md)。
+
 ## 使用方式
 
 和 ChatGPT、Codex 或其他 AI 讨论完一个技术主题后，可以直接说：
@@ -23,6 +29,21 @@
 ### Package Management
 
 - [pnpm 的 content-addressable store](notes/package-management/pnpm-content-addressable-store.md)
+
+## 本地预览
+
+```bash
+npm install
+npm run docs:dev
+```
+
+生产构建：
+
+```bash
+npm run docs:build
+```
+
+VitePress 会从 `notes/` 自动生成左侧导航，并使用内置 local search 建立全文索引。添加普通笔记时不需要手工维护网站 sidebar。
 
 ## 核心原则
 
