@@ -1,6 +1,6 @@
 # Deploy to Cloudflare Pages
 
-Recommended production domain: **`recall.liangkui.me`**.
+Current production URL: **[https://tech-recall.pages.dev](https://tech-recall.pages.dev/)**.
 
 ## Cloudflare Pages
 
@@ -17,15 +17,15 @@ Use these settings:
 | Build output directory | `.vitepress/dist` |
 | Node.js | `22` |
 
-After the first deployment, every push to `main` will trigger a new production deployment. Pull requests can use Cloudflare preview deployments.
+The project is connected to `musicq/tech-recall`. Every push to `main` triggers a new production deployment, and pull requests can use Cloudflare preview deployments.
 
-## Custom domain
+## Future custom domain
 
-After the Pages project is live:
+No custom domain is currently attached. If one is needed later:
 
 1. Open the Pages project in Cloudflare.
 2. Go to **Custom domains**.
-3. Add `recall.liangkui.me`.
+3. Add the chosen hostname, such as `recall.liangkui.me`.
 4. Follow the DNS prompt if Cloudflare asks for confirmation.
 
 ## Local preview

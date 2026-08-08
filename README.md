@@ -6,9 +6,9 @@
 
 ## 在线阅读
 
-推荐域名：**`https://recall.liangkui.me`**。
+当前地址：**[https://tech-recall.pages.dev](https://tech-recall.pages.dev/)**。
 
-仓库已经配置为 VitePress。Cloudflare Pages 连接 `main` 后，每次笔记更新都可以自动重新构建并上线。部署参数见 [DEPLOY.md](DEPLOY.md)。
+仓库已经通过 Cloudflare Pages 连接 `main`，每次笔记更新都可以自动重新构建并上线。部署参数见 [DEPLOY.md](DEPLOY.md)。
 
 ## 使用方式
 
