@@ -8,6 +8,8 @@ This is a personal **memory-refresh knowledge base**, not a textbook, blog, chat
 
 A good note lets the reader recover the correct mental model in a few minutes. Optimize for recall value per line, not completeness.
 
+The repository also contains a VitePress reading site. The site is only a presentation layer over the Markdown notes; do not let website maintenance make note-taking heavier.
+
 ## Required workflow
 
 When asked to record a technical discussion:
@@ -20,7 +22,18 @@ When asked to record a technical discussion:
 6. Rewrite the discussion into a note. Never paste or lightly edit the conversation transcript.
 7. Update the root `README.md` index in the same change.
 8. Check headings, internal links, code, and Mermaid syntax before finishing.
-9. Change only files relevant to the requested topic.
+9. Run `npm run docs:build` when the environment supports it. If it cannot be run, say so in the completion report.
+10. Change only files relevant to the requested topic.
+
+## VitePress site rules
+
+- Notes remain under `notes/<broad-topic>/<descriptive-slug>.md`; do not move them into a separate docs tree.
+- `.vitepress/config.mts` automatically discovers Markdown files under each immediate `notes/<broad-topic>/` directory and builds the sidebar.
+- Do **not** manually add every new note to the sidebar.
+- The built-in local search indexes the rendered note pages automatically.
+- `index.md` is the stable landing page. Do not add every note to the homepage.
+- If a new broad-topic directory needs a nicer sidebar label, optionally add one entry to `categoryNames` in `.vitepress/config.mts`; otherwise its kebab-case name is humanized automatically.
+- Do not modify deployment files for ordinary note additions.
 
 ## Writing contract
 
@@ -90,6 +103,7 @@ After writing, report:
 - files created or updated;
 - whether an existing note was merged instead of duplicated;
 - the main sources checked;
+- whether `npm run docs:build` was run successfully;
 - any remaining uncertainty.
 
 Suggested commit messages:
