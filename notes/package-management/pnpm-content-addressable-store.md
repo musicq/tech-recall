@@ -4,7 +4,7 @@
 
 **Tags:** `pnpm`, `package-manager`, `content-addressable-storage`, `node_modules`
 
-> 版本说明：核心 mental model 基于 pnpm 11/12 文档，检查于 2026-08-08；具体导入方式取决于配置和文件系统。
+> 版本说明：核心 mental model 基于 pnpm 11 文档与源码，检查于 2026-08-08；具体导入方式取决于配置和文件系统。
 
 ## 它解决什么问题
 
@@ -32,6 +32,8 @@ flowchart LR
 ```
 
 `packageImportMethod: auto` 会优先尝试 clone/reflink；不支持时尝试 hard link，再不行才 copy。**文件如何从 store 导入项目**和**依赖之间如何用 symlink 连接**是两件不同的事。
+
+Store 中常见的 `files/ab/cdef...` 不是 package 层级，而是[按 hash 前缀做 directory fan-out](./hash-prefix-directory-sharding.md)，用于避免单个目录承载全部对象。
 
 ## 一个最小目录结构
 
